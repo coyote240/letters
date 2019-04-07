@@ -3,7 +3,8 @@
 from __future__ import unicode_literals
 
 AUTHOR = 'signal9'
-SITENAME = 'Leteroj'
+SITENAME = 'Letters'
+SITESUBTITLE = 'from the workshop'
 SITEURL = ''
 
 PATH = 'content'
@@ -18,16 +19,15 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+# THEME = 'letters'
 
 # Blogroll
-LINKS = (('Pelican', 'http://getpelican.com/'),
-         ('Python.org', 'http://python.org/'),
-         ('Jinja2', 'http://jinja.pocoo.org/'),
-         ('You can modify those links in your config file', '#'),)
+LINKS = (('Electronic Frontier Foundation', 'https://www.eff.org'),)
 
 # Social widget
-SOCIAL = (('Twitter', 'https://twitter.com/AdamAGShamblin'),
-          ('GitHub', 'https://github.com/coyote240'),)
+SOCIAL = (('GitHub', 'https://github.com/coyote240'),
+          ('Twitter', 'https://twitter.com/AdamAGShamblin'),
+          ('LinkedIn', 'https://www.linkedin.com/in/adam-shamblin/'))
 
 DEFAULT_PAGINATION = 10
 

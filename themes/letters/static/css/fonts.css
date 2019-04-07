@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'Exo 2';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url(../fonts/Exo2-Regular.otp') format('opentype'),
+		url(../fonts/Exo2-Bold.otp') format('opentype'),
+		url(../fonts/Exo2-Italic.otp') format('opentype');
+}

@@ -1,5 +1,5 @@
 Title: Science Friday - Basic Setup and Hardening of a Linux Server
-Date: 2017-06-24
+Date: 2019-06-24
 Category: Security
 
 ## Prerequisites

@@ -1,40 +1,14 @@
-# Letters
+# Letters from the Workshop
 
 https://letters.vexingworkshop.com
 
-## Goals
+This is the source for my blog, [Letters from the
+Workshop](https://letters.vexingworkshop.com). The site is generated using the
+Pelican static site generator, which reduces the friction encountered when
+writing while eliminating the need to expend cycles maintaining a database. If
+the content is static, why not deliver static content?
 
-### No Frameworks!
+The theme is derived from the default 'notmyidea' theme that ships with Pelican.
 
-* Using, as much as possible, only native browser frameworks
-* Use WebComponents where practical for more involved features
-* Use ES6 as much as is practical
-
-#### How?
-
-For now, I really only care about Firefox. This is my toy, and I feel perfectly
-fine going retro-90's and saying that my site is best viewed with Firefox. That
-being said, these should also be *standard* features, so they should work on
-Firefox and webkit-derived browsers.
-
-### Offline!
-
-* Don't go blank or freak out when a device is offline
-* Queue up network interactions where they can be
-
-#### How?
-
-_Offline First_ isn't quite the right term, as web pages have to be delivered to
-an online client first, but it is my intention to build this site such that it
-will keep working when offline, or fail gracefully where it may not.
-
-### Multilingual, EN/EO
-
-* Multilingual website, hosted in both English and Esperanto
-* Navigation, etc. in both languages
-* Content in both, if practical
-* Easy to switch languages
-
-#### How?
-
-Proxy the `navigator.language` object and switch on change.
+All content on this site, unless otherwise specified, is licenced under a
+[Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)
