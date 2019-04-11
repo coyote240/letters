@@ -1,0 +1,31 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: letters
+spec:
+  selector:
+    app: letters
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: letters-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: letters
+  template:
+    metadata:
+      labels:
+        app: letters
+    spec:
+      containers:
+        - name: letters
+          image: vexingworkshop/letters:latest
+          ports:
+            - containerPort: 80

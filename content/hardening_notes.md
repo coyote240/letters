@@ -1,6 +1,13 @@
 Title: Science Friday - Basic Setup and Hardening of a Linux Server
-Date: 2019-06-24
+Date: 2019-04-10
 Category: Security
+
+## What's this?
+
+I put this guide together a couple of years ago for a number of friends of mine,
+so that we had a baseline Debian setup for future projects. There are certainly
+more or other things you can do to a new Linux installation, but this is what I
+find to be a good, minimal, starting point.
 
 ## Prerequisites
 

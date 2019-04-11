@@ -19,7 +19,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-# THEME = 'letters'
+THEME = './themes/letters'
 
 # Blogroll
 LINKS = (('Electronic Frontier Foundation', 'https://www.eff.org'),)
