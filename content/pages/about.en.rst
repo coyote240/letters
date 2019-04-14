@@ -1,6 +1,9 @@
 About
 #####
 
+:slug: about-me
+:lang: en
+
 My name is Adam. I am an aging engineer, tinker, hippy and anarchist. I love
 science fiction novels, doom metal, board games and motorcycles.
 
