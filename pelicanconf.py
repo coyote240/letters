@@ -5,9 +5,17 @@ from __future__ import unicode_literals
 AUTHOR = 'signal9'
 SITENAME = 'Letters'
 SITESUBTITLE = 'from the workshop'
-SITEURL = ''
+SITEURL = 'https://letters.vexingworkshop.com'
 
 PATH = 'content'
+STATIC_PATHS = [
+    'files/keybase.txt',
+    'files/robots.txt'
+]
+EXTRA_PATH_METADATA = {
+    'files/keybase.txt': {'path': 'keybase.txt'},
+    'files/robots.txt': {'path': 'robots.txt'}
+}
 
 TIMEZONE = 'America/Denver'
 

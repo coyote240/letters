@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/signal9
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://letters.vexingworkshop.com
+  * I am signal9 (https://keybase.io/signal9) on keybase.
+  * I have a public key ASAMPjTezGalwRLCaMjG6_Q2yDhTgxXJ3iJc9zX6XeEu0Ao
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120f184075250f27a00b7598e2220192d271bba153927553fd06d3d6902f51cf4170a",
+      "host": "keybase.io",
+      "kid": "01200c3e34decc66a5c112c268c8c6ebf436c838538315c9de225cf735fa5de12ed00a",
+      "uid": "9017be00597e47ab643335140ad2ec19",
+      "username": "signal9"
+    },
+    "merkle_root": {
+      "ctime": 1555254389,
+      "hash": "da41d4c3af0ae986eb06399423b18af839c47ae5b96481bb64592cc2b1b4dd136def878c8a13d1c9a9809b44112a210f1b71638c20b495bd3129d81d6ac246c1",
+      "hash_meta": "dac869f838477ce6d8d4ca7169b70df7d318b891b3b2fd6317a3fc8031d2a525",
+      "seqno": 5165243
+    },
+    "service": {
+      "entropy": "A4uLhHkPuWjA06vpqdBUlkCW",
+      "hostname": "letters.vexingworkshop.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555254402,
+  "expire_in": 504576000,
+  "prev": "3bc66f964b4e92460c4933d9b81e9ff3bdb180ca28aedce232749cd8b5b712c1",
+  "seqno": 37,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgDD403sxmpcESwmjIxuv0Nsg4U4MVyd4iXPc1+l3hLtAKp3BheWxvYWTESpcCJcQgO8ZvlktOkkYMSTPZuB6f872xgMoortziMnSc2LW3EsHEIGr8oFew02OA7ydlvEUarGfjL6t/totJ/gH4bZ+jJ6kaAgHCo3NpZ8RAprBkm3BUsxFV6W0MPwjOxEQcBvGIqhFysBtRqvNzXvB+NxxOQKBi/zLeJHXTHYgPbnAGuJxqZUNyo4kXA53iAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIG/ZNXWs4J61JhgPffpruIbgeVzto5DS+th7yD0OuOZXo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/signal9
+
+==================================================================

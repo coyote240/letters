@@ -27,5 +27,6 @@ spec:
       containers:
         - name: letters
           image: vexingworkshop/letters:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
