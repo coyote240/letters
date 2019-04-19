@@ -12,3 +12,9 @@ The theme is derived from the default 'notmyidea' theme that ships with Pelican.
 
 All content on this site, unless otherwise specified, is licenced under a
 [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/)
+
+## Developing Locally
+
+```shell
+pelican -r --listen content
+```
