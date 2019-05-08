@@ -10,11 +10,13 @@ SITEURL = 'https://letters.vexingworkshop.com'
 PATH = 'content'
 STATIC_PATHS = [
     'files/keybase.txt',
-    'files/robots.txt'
+    'files/robots.txt',
+    'files/security.txt'
 ]
 EXTRA_PATH_METADATA = {
     'files/keybase.txt': {'path': 'keybase.txt'},
-    'files/robots.txt': {'path': 'robots.txt'}
+    'files/robots.txt': {'path': 'robots.txt'},
+    'files/security.txt': {'path': '.well-known/security.txt'}
 }
 
 TIMEZONE = 'America/Denver'
