@@ -1,0 +1,4 @@
+Contact: mailto:adam@vexingworkshop.com
+Encryption: https://keybase.io/signal9/pgp_keys.asc
+Preferred-Languages: en, eo
+Canonical: https://letters.vexingworkshop.com/.well-known/security.txt
