@@ -18,3 +18,18 @@ All content on this site, unless otherwise specified, is licenced under a
 ```shell
 pelican -r --listen content
 ```
+
+## Testing Using Docker
+
+### Build the image
+
+```shell
+docker build -t vexingworkshop/letters:latest
+```
+
+
+### Run the image
+
+```shell
+docker run --rm -p 8080:80 vexingworkshop/letters
+```

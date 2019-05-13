@@ -1,4 +1,17 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
 Contact: mailto:adam@vexingworkshop.com
 Encryption: https://keybase.io/signal9/pgp_keys.asc
 Preferred-Languages: en, eo
 Canonical: https://letters.vexingworkshop.com/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iQEcBAEBCgAGBQJcy48VAAoJEEOZQ9ugXZ82n/0H/2jg6EYFNfpB7Mmbg6X3yZcM
+XIazmzrkLfVmRfxdbdfOLfwm84C1DxqPx3HpSxb39acQzBBiXFqwbesgwTi4Swkr
+VwXOAE5QSou0DD/QzB8cy36nEElVJzl9HCvsfj0NkGUrW0Mc5XopHagCS09oqVcZ
+lmxi+xvFUX6LSPpsIh0g1khYBtXOTHbbr7nxaaJIO/sdWojyXeDMmSwI+FpborWv
+JVafr3q0XFKcPqI2sWWTX6Avy3Y6rSbWk2kNX6INgE1N9kTHrcQo5EYn/dPLcALc
+56ZjlDTRdH9+KEuy7E+2XN68QEsr3ERjCe7eSc5iiyVALaQsEzz7WA8XZfqUtuU=
+=nvau
+-----END PGP SIGNATURE-----

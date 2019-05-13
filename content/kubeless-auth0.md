@@ -1,4 +1,9 @@
-# Securing Kubeless Functions with Auth0 and JWT
+Title: Securing Kubeless Functions with Auth0 and JWT
+Date: 2019-05-12
+Category: DevOps
+Tags: kubernetes, serverless
+Status: draft
+
 
 Of late I have had a professional interest in Functions as a Service. While I
 was slow to jump on the bandwagon, there has been an increasing need for one-off
