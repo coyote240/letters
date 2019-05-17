@@ -32,12 +32,14 @@ AUTHOR_FEED_RSS = None
 THEME = './themes/letters'
 
 # Blogroll
-LINKS = (('Electronic Frontier Foundation', 'https://www.eff.org'),)
+LINKS = (('Electronic Frontier Foundation', 'https://www.eff.org'),
+         ('Esperanto USA', 'https://esperanto-usa.org'),)
 
 # Social widget
 SOCIAL = (('GitHub', 'https://github.com/coyote240'),
           ('Twitter', 'https://twitter.com/AdamAGShamblin'),
-          ('LinkedIn', 'https://www.linkedin.com/in/adam-shamblin/'))
+          ('LinkedIn', 'https://www.linkedin.com/in/adam-shamblin/'),
+          ('Webring', 'https://webring.xxiivv.com/#random'))
 
 DEFAULT_PAGINATION = 10
 

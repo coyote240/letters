@@ -287,7 +287,7 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		width: 615px;
 	}
 
-	#extras .blogroll li {float: left; margin: 0 20px 0 0; width: 185px;}
+	#extras .blogroll li {margin: 0 20px 0 0; width: 215px;}
 
 	/* Social */
 	#extras .social {
@@ -328,6 +328,10 @@ img.left, figure.left {float: left; margin: 0 2em 2em 0;}
 		.social a[href*='twitter.com'] {background-image: url('../images/icons/twitter.png');}
 		.social a[href*='vimeo.com'] {background-image: url('../images/icons/vimeo.png');}
 		.social a[href*='youtube.com'] {background-image: url('../images/icons/youtube.png');}
+    .social a[href*='webring.xxiivv.com'] {
+      background-image: url('../images/icons/webring.black.svg');
+      background-size: 16px 16px;
+    }
 
 /*
 	About
