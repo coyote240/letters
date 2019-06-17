@@ -38,13 +38,14 @@ All renewal attempts failed. The following certs could not be renewed:
   /etc/letsencrypt/live/vexingworkshop.com/fullchain.pem (failure)
 ```
 
-As I dug through the [`certbot` documentation](https://certbot.eff.org/docs/), I
-found that the `renew` command was not compatible with the interactive process
-described in the article above. I was going to have to write some scripts to
-be called as hooks through the upgrade process that would setup the necessary
-DNS records, perform the deploy, then clean up after. As I was getting started
-writing these scripts, I discovered that there are [plugins available](https://certbot.eff.org/docs/using.html#id15) for my cloud provider and others, that could help me with this task!
-
+Tiel mi elfosis la [`certbot` dokumentado](https://certbot.eff.org/docs/), mi
+trovis ke la `renew` komando ne estis kongrua kun la dialoga reĝimo priskribis
+in la artikolo super. Mi devos eskribi iujn skriptojn por alvoko tra la
+ĝisdatiga procezo. La celoj de ĉi ties skriptoj estas por kreiado da la necesa
+agordadoj de DNS rikordoj, kaj la disponigoj, kaj la purigi poste. Tiel mi
+komencis skribi la skriptojn, mi trovis ke jam estis [kromprogramoj
+preta](https://certbot.eff.org/docs/using.html#id15) por mia provizanto de nubaj
+servoj, ke povis helpi min kun ĉi tiu tasko!
 
 ## Let's set up some tools
 
