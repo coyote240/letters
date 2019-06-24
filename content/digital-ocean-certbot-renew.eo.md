@@ -4,6 +4,7 @@ Category: Security
 Tags: kubernetes, security, digitalocean
 Slug: renew-lets-encrypt-certificate-for-digitalocean-load-balancer
 Lang: eo
+Status: draft
 
 Ekde mi komencis lerni uzi [Kubernetes](https://kubernetes.io) por labori, mi
 gastigi ĉi tiu retejo kaj kelkaj aliaj sur malgrandan sektoraron sur
