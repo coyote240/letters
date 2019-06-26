@@ -16,9 +16,9 @@ It was an excellent tutorial and I'd recommend it to anyone interested.
 I've been working on the internet for a long time, long enough that some of my
 favorite languages and technologies aren't really used that much anymore (sorry
 Apache and Perl). Because I was a Perl programmer in the late 90's, I read a
-lot fo writing by its charismatic and prolific designer, Larry Wall. Larry would
+lot of writing by its charismatic and prolific designer, Larry Wall. Larry would
 write at length about where the various Frankenstein pieces of the language came
-from. This mean dives into Common LISP, Prolog, you name it, and I became a bit
+from. This means dives into Common LISP, Prolog, you name it, and I became a bit
 of a language nerd. Not a language Alpha-nerd - I want to be careful about what
 I claim about myself - but at the very least a neophyte nerd.
 
@@ -30,7 +30,7 @@ it isn't something new and sexy, but a language that was introduced more than
 thirty years ago.
 
 I currently work in the internet voice and video domain, specifically in what is
-being called Unified Communications. Erlang has it's roots in
+being called Unified Communications. Erlang has its roots in
 telecommunications, so it is no surprise that a number of applications in our
 space are built upon it. There is one project in particular that we will be
 relying upon a great deal in the coming months, such that we will need to
