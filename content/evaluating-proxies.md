@@ -31,9 +31,9 @@ application to meet.
 
 For the purposes of my evaluation, we reduced our selection of proxies to three:
 
-1. [Ingress-NGINX](https://kubernetes.github.io/ingress-nginx/) - A basic but
-   powerful, open source ingress controller. This is the controller that many
-   teams start with, and there is plenty of existing skill on our team to
-   support it.
-1. [Kong](https://konghq.com) - Available as both open source and enterprise...
-1. [Ambassador](https://getambassador.com)
+* [Ingress-NGINX](https://kubernetes.github.io/ingress-nginx/) - A basic but
+  powerful, open source ingress controller. This is the controller that many
+  teams start with, and there is plenty of existing skill on our team to
+  support it.
+* [Kong](https://konghq.com) - Available as both open source and enterprise...
+* [Ambassador](https://getambassador.com)

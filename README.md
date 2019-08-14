@@ -19,6 +19,8 @@ All content on this site, unless otherwise specified, is licenced under a
 pelican -r --listen content
 ```
 
+By default, a local web server will be running at port 8000.
+
 ## Testing Using Docker
 
 ### Build the image
