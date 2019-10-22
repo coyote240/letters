@@ -41,7 +41,7 @@ SOCIAL = (('GitHub', 'https://github.com/coyote240'),
           ('LinkedIn', 'https://www.linkedin.com/in/adam-shamblin/'),
           ('Webring', 'https://webring.xxiivv.com/#random'))
 
-DEFAULT_PAGINATION = 10
+DEFAULT_PAGINATION = 5
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = True
