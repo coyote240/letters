@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+from exifiscerate import exifiscerate
 
 AUTHOR = 'signal9'
 SITENAME = 'Letters'
 SITESUBTITLE = 'from the workshop'
 SITEURL = 'https://letters.vexingworkshop.com'
+
+PLUGINS = [exifiscerate, ]
 
 PATH = 'content'
 STATIC_PATHS = [
