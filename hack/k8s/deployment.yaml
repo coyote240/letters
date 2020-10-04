@@ -12,7 +12,7 @@ metadata:
     service.beta.kubernetes.io/do-loadbalancer-healthcheck-healthy-threshold: "5"
     service.beta.kubernetes.io/do-loadbalancer-protocol: "http"
     service.beta.kubernetes.io/do-loadbalancer-algorithm: "round_robin"
-    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "3792d0ca-7583-4f01-a7bf-69704f48129f"
+    service.beta.kubernetes.io/do-loadbalancer-certificate-id: "46e58e8f-2498-498a-b072-5baaa9eed9da"
     service.beta.kubernetes.io/do-loadbalancer-redirect-http-to-https: "true"
 spec:
   type: LoadBalancer
