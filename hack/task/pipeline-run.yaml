@@ -1,0 +1,24 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: letters-build-pipeline-run
+spec:
+  serviceAccountName: build-bot
+  pipelineRef:
+    name: letters-build-pipeline
+  workspaces:
+    - name: shared-data
+      volumeClaimTemplate:
+        spec:
+          accessModes:
+            - ReadWriteOnce
+          resources:
+            requests:
+              storage: 1Gi
+  params:
+    - name: repo-url
+      value: https://github.com/coyote240/letters.git
+    - name: branch-name
+      value: master
+    - name: image
+      value: vexingworkshop/letters
