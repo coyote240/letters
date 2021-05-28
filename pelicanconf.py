@@ -14,7 +14,7 @@ STATIC_PATHS = [
     'files/security.txt'
 ]
 EXTRA_PATH_METADATA = {
-    'files/keybase.txt': {'path': 'keybase.txt'},
+    'files/keybase.txt': {'path': '.well-known/keybase.txt'},
     'files/robots.txt': {'path': 'robots.txt'},
     'files/security.txt': {'path': '.well-known/security.txt'}
 }
@@ -37,7 +37,7 @@ LINKS = (('Electronic Frontier Foundation', 'https://www.eff.org'),
 
 # Social widget
 SOCIAL = (('GitHub', 'https://github.com/coyote240'),
-          ('Twitter', 'https://twitter.com/AdamAGShamblin'),
+          ('Fediverse', 'https://freeradical.zone/@signal9'),
           ('LinkedIn', 'https://www.linkedin.com/in/adam-shamblin/'),
           ('Webring', 'https://webring.xxiivv.com/#random'))
 

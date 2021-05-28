@@ -6,7 +6,7 @@ I hereby claim:
 
   * I am an admin of https://letters.vexingworkshop.com
   * I am signal9 (https://keybase.io/signal9) on keybase.
-  * I have a public key ASAMPjTezGalwRLCaMjG6_Q2yDhTgxXJ3iJc9zX6XeEu0Ao
+  * I have a public key ASCG6NZc-JT-siwLSCzidfCkF9JHHW6bMdOH3p44wtlBKQo
 
 To do so, I am signing this object:
 
@@ -15,18 +15,18 @@ To do so, I am signing this object:
     "key": {
       "eldest_kid": "0120f184075250f27a00b7598e2220192d271bba153927553fd06d3d6902f51cf4170a",
       "host": "keybase.io",
-      "kid": "01200c3e34decc66a5c112c268c8c6ebf436c838538315c9de225cf735fa5de12ed00a",
+      "kid": "012086e8d65cf894feb22c0b482ce275f0a417d2471d6e9b31d387de9e38c2d941290a",
       "uid": "9017be00597e47ab643335140ad2ec19",
       "username": "signal9"
     },
     "merkle_root": {
-      "ctime": 1555254389,
-      "hash": "da41d4c3af0ae986eb06399423b18af839c47ae5b96481bb64592cc2b1b4dd136def878c8a13d1c9a9809b44112a210f1b71638c20b495bd3129d81d6ac246c1",
-      "hash_meta": "dac869f838477ce6d8d4ca7169b70df7d318b891b3b2fd6317a3fc8031d2a525",
-      "seqno": 5165243
+      "ctime": 1622173386,
+      "hash": "c451871fe1ebf3c1dfdd0476fe8962d5df4d176169d63f67f4b08084268816e7fce8f484f58b2434e87aa1240445d645e291e0576118ceb41c68fab40cfae5aa",
+      "hash_meta": "09b72d339dfa42d6fa4e317fb11e872298b6ff6164ac91c6f63847f786cbd38e",
+      "seqno": 20060631
     },
     "service": {
-      "entropy": "A4uLhHkPuWjA06vpqdBUlkCW",
+      "entropy": "cbCzYXXKoorcshDEXUG3dBZc",
       "hostname": "letters.vexingworkshop.com",
       "protocol": "https:"
     },
@@ -35,18 +35,78 @@ To do so, I am signing this object:
   },
   "client": {
     "name": "keybase.io go client",
-    "version": "3.2.2"
+    "version": "5.6.1"
   },
-  "ctime": 1555254402,
+  "ctime": 1622173453,
   "expire_in": 504576000,
-  "prev": "3bc66f964b4e92460c4933d9b81e9ff3bdb180ca28aedce232749cd8b5b712c1",
-  "seqno": 37,
+  "prev": "9448df79381008e8581ac8ed805904ecc31f0cd6fcc03c571f6aca85d8537a61",
+  "seqno": 99,
   "tag": "signature"
+}==================================================================
+https://keybase.io/signal9
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://letters.vexingworkshop.com
+    * I am signal9 (https://keybase.io/signal9) on keybase.
+      * I have a public key ASCG6NZc-JT-siwLSCzidfCkF9JHHW6bMdOH3p44wtlBKQo
+
+      To do so, I am signing this object:
+
+{
+    "body": {
+          "key": {
+                  "eldest_kid":
+                    "0120f184075250f27a00b7598e2220192d271bba153927553fd06d3d6902f51cf4170a",
+                        "host": "keybase.io",
+                              "kid":
+                                "012086e8d65cf894feb22c0b482ce275f0a417d2471d6e9b31d387de9e38c2d941290a",
+                                    "uid": "9017be00597e47ab643335140ad2ec19",
+                                          "username": "signal9"
+                                                },
+              "merkle_root": {
+                      "ctime": 1622173386,
+                            "hash":
+                              "c451871fe1ebf3c1dfdd0476fe8962d5df4d176169d63f67f4b08084268816e7fce8f484f58b2434e87aa1240445d645e291e0576118ceb41c68fab40cfae5aa",
+                                  "hash_meta":
+                                    "09b72d339dfa42d6fa4e317fb11e872298b6ff6164ac91c6f63847f786cbd38e",
+                                        "seqno": 20060631
+                                              },
+                  "service": {
+                          "entropy": "cbCzYXXKoorcshDEXUG3dBZc",
+                                "hostname": "letters.vexingworkshop.com",
+                                      "protocol": "https:"
+                                            },
+                      "type": "web_service_binding",
+                          "version": 2
+                              },
+      "client": {
+            "name": "keybase.io go client",
+                "version": "5.6.1"
+                    },
+        "ctime": 1622173453,
+          "expire_in": 504576000,
+            "prev":
+              "9448df79381008e8581ac8ed805904ecc31f0cd6fcc03c571f6aca85d8537a61",
+              "seqno": 99,
+                "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgDD403sxmpcESwmjIxuv0Nsg4U4MVyd4iXPc1+l3hLtAKp3BheWxvYWTESpcCJcQgO8ZvlktOkkYMSTPZuB6f872xgMoortziMnSc2LW3EsHEIGr8oFew02OA7ydlvEUarGfjL6t/totJ/gH4bZ+jJ6kaAgHCo3NpZ8RAprBkm3BUsxFV6W0MPwjOxEQcBvGIqhFysBtRqvNzXvB+NxxOQKBi/zLeJHXTHYgPbnAGuJxqZUNyo4kXA53iAKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIG/ZNXWs4J61JhgPffpruIbgeVzto5DS+th7yD0OuOZXo3RhZ80CAqd2ZXJzaW9uAQ==
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghujWXPiU/rIsC0gs4nXwpBfSRx1umzHTh96eOMLZQSkKp3BheWxvYWTESpcCY8QglEjfeTgQCOhYGsjtgFkE7MMfDNb8wDxXH2rKhdhTemHEIPVXPmNojMg6U79JSnQl4XWzleEyrmze9kCZq4SSyndxAgHCo3NpZ8RA2Yo11/PMpNaXKjX2y2rq8SVyZ5w5obkL3FFiCO+N9dWtJ+7ec/x5tifj7pRX+c5yZzx89RJcWVRbVDOkIn9LCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAM1m3S+bRrlCXZ8ePdcfMaeUUAvBS+tCzn/5YIQeI6ro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/signal9
+
+==================================================================
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEghujWXPiU/rIsC0gs4nXwpBfSRx1umzHTh96eOMLZQSkKp3BheWxvYWTESpcCY8QglEjfeTgQCOhYGsjtgFkE7MMfDNb8wDxXH2rKhdhTemHEIPVXPmNojMg6U79JSnQl4XWzleEyrmze9kCZq4SSyndxAgHCo3NpZ8RA2Yo11/PMpNaXKjX2y2rq8SVyZ5w5obkL3FFiCO+N9dWtJ+7ec/x5tifj7pRX+c5yZzx89RJcWVRbVDOkIn9LCqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIAM1m3S+bRrlCXZ8ePdcfMaeUUAvBS+tCzn/5YIQeI6ro3RhZ80CAqd2ZXJzaW9uAQ==
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
