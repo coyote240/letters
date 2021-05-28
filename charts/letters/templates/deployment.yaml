@@ -13,10 +13,8 @@ spec:
       {{- include "letters.selectorLabels" . | nindent 6 }}
   template:
     metadata:
-      {{- with .Values.podAnnotations }}
       annotations:
-        {{- toYaml . | nindent 8 }}
-      {{- end }}
+        rollme: {{ randAlphaNum 5 | quote }}
       labels:
         {{- include "letters.selectorLabels" . | nindent 8 }}
     spec:
