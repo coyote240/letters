@@ -43,4 +43,5 @@ spec:
       workspaces:
         - name: source
           workspace: source
-    - name: deploy
+        - name: dockerconfig
+          workspace: dockerconfig
