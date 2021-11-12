@@ -1,0 +1,53 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: event-listener-role
+rules:
+  - apiGroups: [""]
+    resources:
+      - secrets
+    verbs:
+      - get
+      - list
+      - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: event-listener-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: {{ .Values.serviceAccount.listener }}
+    namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: event-listener-role
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/vv1
+kind: Role
+metadata:
+  name: pipeline-role
+rules:
+  - apiGroups: [""]
+    resources:
+      - pods
+    verbs:
+      - get
+      - list
+      - watch
+      - create
+---
+apiVersion: rbac.authorization.k8s.io/vv1
+kind: Role
+metadata:
+  name: pipeline-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: {{ .Values.serviceAccount.listener }}
+    namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: Role
+  name: pipeline-role
+  apiGroup: rbac.authorization.k8s.io

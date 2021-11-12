@@ -1,0 +1,89 @@
+apiVersion: triggers.tekton.dev/v1beta1
+kind: EventListener
+metadata:
+  name: cluster-listener
+serviceAccountName: {{ .Values.serviceAccount.listener }}
+spec:
+  triggers:
+    - triggerRef: letters-trigger
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: Trigger
+metadata:
+  name: letters-trigger
+spec:
+  interceptors:
+    - ref:
+        name: "github"
+        kind: ClusterInterceptor
+        apiVersion: triggers.tekton.dev
+      params:
+        - name: "secretRef"
+          value:
+            secretName: github-secret
+            secretKey: secretToken
+        - name: "eventTypes"
+          value: ["push"]
+    - ref:
+        name: "cel"
+      params:
+        - name: "filter"
+          value: "body.ref == ['refs/head/main']"
+  bindings:
+    - ref: letters-binding
+  template:
+    ref: letters-template
+---
+apiVersion: trigger.tekton.dev/v1beta1
+kind: TriggerBinding
+metadata:
+  name: letters-binding
+spec:
+  params:
+    - name: repo-url
+      value: $(body.repository.url)
+    - name: branch
+      value: main
+    - name: image
+      value: $()
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: TriggerTemplate
+metadata:
+  name: letters-template
+spec:
+  params:
+    - name: repo-url
+      description: git repo to clone
+    - name: branch
+      description: git branch to clone
+      default: main
+    - name: image
+      description: published image
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1beta1
+      kind: PipelineRun
+      metadata:
+        generateName: letters-run-
+      pipelineRef:
+        name: letters-deploy
+      workspaces:
+        - name: source
+          volumeClaimTemplate:
+            spec:
+              accessModes:
+                - ReadWriteOnce
+              resources:
+                requests:
+                  storage: 1Gi
+              storageClassName: do-block-storage
+        - name: dockerconfig
+          secret:
+            secretName: github-docker-config
+      params:
+        - name: repo-url
+          value: $(tt.params.repo-url)
+        - name: branch
+          value: $(tt.params.branch)
+        - name: image
+          value: $(tt.params.image)
