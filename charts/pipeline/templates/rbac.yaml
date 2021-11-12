@@ -16,6 +16,7 @@ rules:
     resources:
       - clusterinterceptors
       - eventlisteners
+      - pipelineruns
       - triggers
       - triggertemplates
       - triggerbindings
@@ -23,6 +24,15 @@ rules:
       - get
       - list
       - watch
+  - apiGroups:
+      - tekton.dev
+    resources:
+      - pipelineruns
+    verbs:
+      - get
+      - list
+      - watch
+      - create
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding

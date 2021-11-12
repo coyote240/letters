@@ -28,7 +28,7 @@ spec:
         name: "cel"
       params:
         - name: "filter"
-          value: "body.ref == ['refs/head/main']"
+          value: "body.ref == 'refs/heads/master'"
   bindings:
     - ref: letters-binding
   template:
@@ -42,10 +42,8 @@ spec:
   params:
     - name: repo-url
       value: $(body.repository.url)
-    - name: branch
-      value: main
     - name: image
-      value: $()
+      value: ghcr.io/coyote240/letters:$(body.head_commit.id)
 ---
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
@@ -55,9 +53,6 @@ spec:
   params:
     - name: repo-url
       description: git repo to clone
-    - name: branch
-      description: git branch to clone
-      default: main
     - name: image
       description: published image
   resourcetemplates:
@@ -65,25 +60,24 @@ spec:
       kind: PipelineRun
       metadata:
         generateName: letters-run-
-      pipelineRef:
-        name: letters-deploy
-      workspaces:
-        - name: source
-          volumeClaimTemplate:
-            spec:
-              accessModes:
-                - ReadWriteOnce
-              resources:
-                requests:
-                  storage: 1Gi
-              storageClassName: do-block-storage
-        - name: dockerconfig
-          secret:
-            secretName: github-docker-config
-      params:
-        - name: repo-url
-          value: $(tt.params.repo-url)
-        - name: branch
-          value: $(tt.params.branch)
-        - name: image
-          value: $(tt.params.image)
+      spec:
+        pipelineRef:
+          name: letters-deploy
+        workspaces:
+          - name: source
+            volumeClaimTemplate:
+              spec:
+                accessModes:
+                  - ReadWriteOnce
+                resources:
+                  requests:
+                    storage: 1Gi
+                storageClassName: do-block-storage
+          - name: dockerconfig
+            secret:
+              secretName: github-docker-config
+        params:
+          - name: repo-url
+            value: $(tt.params.repo-url)
+          - name: image
+            value: $(tt.params.image)
