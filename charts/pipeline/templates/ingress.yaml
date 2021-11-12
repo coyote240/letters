@@ -15,8 +15,9 @@ spec:
           service:
             name: el-cluster-listener
             port:
-              number: 80
-          path: /
+              number: 8080
+        path: /
+        pathType: ImplementationSpecific
   tls:
     - hosts:
       - trigger.vexingworkshop.com

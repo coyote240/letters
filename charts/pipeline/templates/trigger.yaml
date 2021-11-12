@@ -2,8 +2,8 @@ apiVersion: triggers.tekton.dev/v1beta1
 kind: EventListener
 metadata:
   name: cluster-listener
-serviceAccountName: {{ .Values.serviceAccount.listener }}
 spec:
+  serviceAccountName: {{ .Values.serviceAccount.listener }}
   triggers:
     - triggerRef: letters-trigger
 ---
@@ -34,7 +34,7 @@ spec:
   template:
     ref: letters-template
 ---
-apiVersion: trigger.tekton.dev/v1beta1
+apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerBinding
 metadata:
   name: letters-binding
