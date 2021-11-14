@@ -42,8 +42,12 @@ spec:
   params:
     - name: repo-url
       value: $(body.repository.url)
-    - name: image
-      value: ghcr.io/coyote240/letters:$(body.head_commit.id)
+    - name: owner
+      value: $(body.repository.owner.name)
+    - name: image-name
+      value: $(body.repository.name)
+    - name: commit
+      value: $(body.head_commit.id)
 ---
 apiVersion: triggers.tekton.dev/v1beta1
 kind: TriggerTemplate
@@ -53,8 +57,12 @@ spec:
   params:
     - name: repo-url
       description: git repo to clone
-    - name: image
-      description: published image
+    - name: owner
+      description: github owner of repo
+    - name: image-name
+      description: github repo name
+    - name: commit
+      description: git commit id
   resourcetemplates:
     - apiVersion: tekton.dev/v1beta1
       kind: PipelineRun
@@ -81,3 +89,4 @@ spec:
             value: $(tt.params.repo-url)
           - name: image
             value: $(tt.params.image)
+            value: ghcr.io/$(tt.params.owner)/$(tt.params.image-name):$(tt.params.commit)

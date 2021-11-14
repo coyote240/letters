@@ -1,4 +1,3 @@
-cosign.*
 __pycache__
 output
 *.bak

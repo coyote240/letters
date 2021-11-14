@@ -1,6 +1,6 @@
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
+kind: Role
 metadata:
   name: event-listener-role
 rules:
@@ -14,7 +14,6 @@ rules:
   - apiGroups:
       - triggers.tekton.dev
     resources:
-      - clusterinterceptors
       - eventlisteners
       - pipelineruns
       - triggers
@@ -35,7 +34,7 @@ rules:
       - create
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
+kind: RoleBinding
 metadata:
   name: event-listener-rolebinding
 subjects:
@@ -43,12 +42,39 @@ subjects:
     name: {{ .Values.serviceAccount.listener }}
     namespace: {{ .Release.Namespace }}
 roleRef:
-  kind: ClusterRole
+  kind: Role
   name: event-listener-role
   apiGroup: rbac.authorization.k8s.io
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: Role
+kind: ClusterRole
+metadata:
+  name: interceptor-role
+rules:
+  - apiGroups:
+      - triggers.tekton.dev
+    resources:
+      - clusterinterceptors
+    verbs:
+      - get
+      - list
+      - watch
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: interceptor-rolebinding
+subjects:
+  - kind: ServiceAccount
+    name: {{ .Values.serviceAccount.listener }}
+    namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: ClusterRole
+  name: interceptor-role
+  apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
 metadata:
   name: pipeline-role
 rules:
@@ -62,14 +88,14 @@ rules:
       - create
 ---
 apiVersion: rbac.authorization.k8s.io/v1
-kind: RoleBinding
+kind: ClusterRoleBinding
 metadata:
   name: pipeline-rolebinding
 subjects:
   - kind: ServiceAccount
-    name: {{ .Values.serviceAccount.listener }}
+    name: {{ .Values.serviceAccount.pipeline }}
     namespace: {{ .Release.Namespace }}
 roleRef:
-  kind: Role
+  kind: ClusterRole
   name: pipeline-role
   apiGroup: rbac.authorization.k8s.io

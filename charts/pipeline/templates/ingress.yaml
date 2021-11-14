@@ -8,17 +8,17 @@ metadata:
     cert-manager.io/cluster-issuer: "acme-prod"
 spec:
   rules:
-  - host: trigger.vexingworkshop.com
+  - host: {{ .Values.ingress.host }}
     http:
       paths:
       - backend:
           service:
-            name: el-cluster-listener
+            name: {{ .Values.ingress.service }}
             port:
               number: 8080
         path: /
         pathType: ImplementationSpecific
   tls:
     - hosts:
-      - trigger.vexingworkshop.com
-      secretName: vexing-tls
+      - {{ .Values.ingress.host }}
+      secretName: {{ .Values.ingress.tlsSecretName }}
