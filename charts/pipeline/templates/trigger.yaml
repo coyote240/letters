@@ -1,0 +1,92 @@
+apiVersion: triggers.tekton.dev/v1beta1
+kind: EventListener
+metadata:
+  name: cluster-listener
+spec:
+  serviceAccountName: {{ .Values.serviceAccount.listener }}
+  triggers:
+    - triggerRef: letters-trigger
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: Trigger
+metadata:
+  name: letters-trigger
+spec:
+  interceptors:
+    - ref:
+        name: "github"
+        kind: ClusterInterceptor
+        apiVersion: triggers.tekton.dev
+      params:
+        - name: "secretRef"
+          value:
+            secretName: github-interceptor
+            secretKey: interceptorSecret
+        - name: "eventTypes"
+          value: ["push"]
+    - ref:
+        name: "cel"
+      params:
+        - name: "filter"
+          value: "body.ref == 'refs/heads/master'"
+  bindings:
+    - ref: letters-binding
+  template:
+    ref: letters-template
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: TriggerBinding
+metadata:
+  name: letters-binding
+spec:
+  params:
+    - name: repo-url
+      value: $(body.repository.url)
+    - name: owner
+      value: $(body.repository.owner.name)
+    - name: image-name
+      value: $(body.repository.name)
+    - name: commit
+      value: $(body.head_commit.id)
+---
+apiVersion: triggers.tekton.dev/v1beta1
+kind: TriggerTemplate
+metadata:
+  name: letters-template
+spec:
+  params:
+    - name: repo-url
+      description: git repo to clone
+    - name: owner
+      description: github owner of repo
+    - name: image-name
+      description: github repo name
+    - name: commit
+      description: git commit id
+  resourcetemplates:
+    - apiVersion: tekton.dev/v1beta1
+      kind: PipelineRun
+      metadata:
+        generateName: letters-run-
+      spec:
+        pipelineRef:
+          name: letters-deploy
+        workspaces:
+          - name: source
+            volumeClaimTemplate:
+              spec:
+                accessModes:
+                  - ReadWriteOnce
+                resources:
+                  requests:
+                    storage: 1Gi
+                storageClassName: do-block-storage
+          - name: dockerconfig
+            secret:
+              secretName: github-docker-config
+        params:
+          - name: repo-url
+            value: $(tt.params.repo-url)
+          - name: image
+            value: $(tt.params.image)
+            value: ghcr.io/$(tt.params.owner)/$(tt.params.image-name):$(tt.params.commit)

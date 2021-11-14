@@ -1,0 +1,7 @@
+serviceAccount:
+  pipeline: letters-pipeline
+  listener: cluster-listener
+ingress:
+  host: trigger.vexingworkshop.com
+  service: el-cluster-listener
+  tlsSecretName: vexing-tls
