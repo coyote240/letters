@@ -1,3 +1,9 @@
+chart:
+  name: letters
+  version: v0.1.0
+  directory: charts/pipeline
+release:
+  namespace: letters
 serviceAccount:
   pipeline: letters-pipeline
   listener: cluster-listener

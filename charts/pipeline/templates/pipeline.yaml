@@ -10,6 +10,18 @@ spec:
     - name: image
       type: string
       description: name of the image to build
+    - name: chart_name
+      type: string
+      description: name of the helm chart to deploy
+    - name: chart_version
+      type: string
+      description: version of the helm chart to deploy
+    - name: chart_directory
+      type: string
+      description: directory containing the chart to deploy
+    - name: release_namespace
+      type: string
+      description: namespace to deploy the chart
   workspaces:
     - name: source
       description: shared space containing source code
@@ -40,3 +52,21 @@ spec:
           workspace: source
         - name: dockerconfig
           workspace: dockerconfig
+    - name: deploy
+      taskRef:
+        name: helm-upgrade-from-source
+        bundle: gcr.io/tekton-releases/catalog/upstream/helm-upgrade-from-source:0.3
+      runAfter:
+        - build-container
+      params:
+        - name: charts_dir
+          value: $(params.chart_directory)
+        - name: release_version
+          value: $(params.chart_version)
+        - name: release_name
+          value: $(params.chart_name)
+        - name: release_namespace
+          value: $(params.release_namespace)
+      workspaces:
+        - name: source
+          workspace: source

@@ -90,3 +90,11 @@ spec:
           - name: image
             value: $(tt.params.image)
             value: ghcr.io/$(tt.params.owner)/$(tt.params.image-name):$(tt.params.commit)
+          - name: chart_name
+            value: {{ .Values.chart.name }}
+          - name: chart_version
+            value: {{ .Values.chart.version }}
+          - name: chart_directory
+            value: {{ .Values.chart.directory }}
+          - name: release_namespace
+            value: {{ .Values.release.namespace }}
