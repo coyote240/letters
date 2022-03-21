@@ -29,7 +29,6 @@ By default, a local web server will be running at port 8000.
 docker build -t vexingworkshop/letters:latest
 ```
 
-
 ### Run the image
 
 ```shell
@@ -41,3 +40,11 @@ docker run --rm -p 8080:80 vexingworkshop/letters
 ## Build Pipeline
 
 The `pipeline` chart depends upon Tekton Pipelines and Triggers.
+
+To install the Letters build pipeline:
+
+```bash
+helm secrets upgrade --install -f charts/pipeline/values.yaml \
+  -f charts/pipeline/helm_vars/secrets.yaml \
+  letters-pipeline charts/pipeline -n letters-pipeline
+```
